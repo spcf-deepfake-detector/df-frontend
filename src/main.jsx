@@ -4,7 +4,7 @@ import "./index.css";
 
 // Mantine
 import { MantineProvider } from "@mantine/core";
-import theme from "./plugins/mantine.js";
+import { theme, resolver } from "./plugins/mantine.js";
 import "@mantine/core/styles.css";
 
 // React Router
@@ -12,7 +12,7 @@ import AppRouter from "./router/AppRouter.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} cssVariablesResolver={resolver}>
       <AppRouter />
     </MantineProvider>
   </StrictMode>

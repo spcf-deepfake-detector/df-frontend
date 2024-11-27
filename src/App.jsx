@@ -1,16 +1,25 @@
 import { Outlet } from "react-router";
-import "./App.css";
+import { AppShell } from "@mantine/core";
+import classes from "./App.module.css";
+
+// Components
+import Header from "./components/Header.jsx";
+import Container from "./components/Container.jsx";
 
 function App() {
   return (
-    <>
-      <h1>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
-        totam.
-      </h1>
-
-      <Outlet />
-    </>
+    <AppShell className={classes.AppShell} padding="md" header={{ height: 70 }}>
+      <AppShell.Header className={classes.Header}>
+        <Container>
+          <Header />
+        </Container>
+      </AppShell.Header>
+      <AppShell.Main>
+        <Container>
+          <Outlet />
+        </Container>
+      </AppShell.Main>
+    </AppShell>
   );
 }
 

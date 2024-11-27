@@ -1,5 +1,16 @@
 import { createTheme } from "@mantine/core";
 
-const theme = createTheme({});
+const theme = createTheme({
+  fontFamily: "Poppins, sans-serif",
+  other: {
+    majorMonoDisplay: "Major Mono Display, monospace",
+  },
+});
 
-export default theme;
+const resolver = (theme) => ({
+  variables: {
+    "--mantine-major-mono-display": theme.other.majorMonoDisplay,
+  },
+});
+
+export { theme, resolver };
