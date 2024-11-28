@@ -52,7 +52,7 @@ export default function Footer() {
     <footer className={classes.Footer}>
       <div className={classes.SectionOne}>
         <Container py={64}>
-          <Group align="start" wrap="no-wrap">
+          <Group align="start" wrap="no-wrap" gap={32}>
             <Stack w="30%">
               <AppTitle />
 
@@ -67,15 +67,21 @@ export default function Footer() {
             </Stack>
 
             <Stack flex={1}>
-              <Title order={4}>Contact Us</Title>
+              <Title pt={16} order={4}>
+                Contact Us
+              </Title>
               {mappedContactUs}
             </Stack>
             <Stack flex={1}>
-              <Title order={4}>Location</Title>
+              <Title pt={16} order={4}>
+                Location
+              </Title>
               {mappedLocation}
             </Stack>
             <Stack>
-              <Title order={4}>Follow Us</Title>
+              <Title pt={16} order={4}>
+                Follow Us
+              </Title>
             </Stack>
           </Group>
         </Container>
