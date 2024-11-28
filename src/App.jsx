@@ -8,16 +8,14 @@ import Container from "./components/Container.jsx";
 
 function App() {
   return (
-    <AppShell className={classes.AppShell} padding="md" header={{ height: 70 }}>
+    <AppShell header={{ height: 70, offset: false }}>
       <AppShell.Header className={classes.Header}>
         <Container>
           <Header />
         </Container>
       </AppShell.Header>
       <AppShell.Main>
-        <Container>
-          <Outlet />
-        </Container>
+        <Outlet />
       </AppShell.Main>
     </AppShell>
   );

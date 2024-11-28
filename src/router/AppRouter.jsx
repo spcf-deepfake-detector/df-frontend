@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 // Components
 import App from "../App.jsx";
-import UploadPage from "../pages/UploadPage.jsx";
+import LandingPage from "../pages/LandingPage.jsx";
 
 export default function AppRouter() {
   const router = createBrowserRouter([
@@ -12,7 +12,7 @@ export default function AppRouter() {
       children: [
         {
           index: true,
-          element: <UploadPage />,
+          element: <LandingPage />,
         },
       ],
     },
