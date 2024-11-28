@@ -74,7 +74,7 @@ export default function Footer() {
               <Title order={4}>Location</Title>
               {mappedLocation}
             </Stack>
-            <Stack >
+            <Stack>
               <Title order={4}>Follow Us</Title>
             </Stack>
           </Group>
