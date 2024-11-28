@@ -1,6 +1,9 @@
-import { Group, Title, Image } from "@mantine/core";
+import { Group } from "@mantine/core";
 import NavButton from "./buttons/NavButton";
 import { useState } from "react";
+
+// Components
+import AppTitle from "./AppTitle.jsx";
 
 const buttons = [
   {
@@ -40,15 +43,7 @@ export default function Header() {
 
   return (
     <Group h="100%" justify="space-between">
-      <Group gap={0}>
-        <Image src="/df-detector-icon.svg" />
-        <Title
-          order={4}
-          style={{ fontFamily: "var(--mantine-major-mono-display)" }}
-        >
-          DeepFake Detector
-        </Title>
-      </Group>
+      <AppTitle />
 
       <Group gap={32}>{mappedButtons}</Group>
     </Group>
