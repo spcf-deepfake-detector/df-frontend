@@ -45,6 +45,25 @@ npm run lint
 - 🔀 Seamless client-side routing
 - 🧩 Modular React architecture
 
+## 📋 Commit Message Conventions
+
+Standardized emojis to communicate the nature of changes:
+
+- 💯 (`:100:`) Full functionality implementation
+- 🔧 (`:wrench:`) Code improvements or structural changes
+- 🐛 (`:bug:`) Bug fixes
+- 📑 (`:bookmark_tabs:`) Code documentation and comments
+- ☕ (`:coffee:`) Minor or initial changes
+- 🚧 (`:construction:`) Work in progress
+- 🗑️ (`:wastebasket:`) Code or file removal
+- 📓 (`:notebook:`) README updates
+- ✏️ (`:pencil2:`) Typo fixes or renaming
+- ♻️ (`:recycle:`) Code refactoring
+- 🔀 (`:twisted_rightwards_arrows:`) Branch merging
+- ⏪ (`:rewind:`) Change reversion
+- 📱 (`:iphone:`) Responsive design work
+- 📌 (`:pushpin:`) Hotfix
+
 ## 👥 Development Team
 
 - 👨‍💻 **Gabriel Alfonso M. Gatbenton** - Senior Frontend Developer
