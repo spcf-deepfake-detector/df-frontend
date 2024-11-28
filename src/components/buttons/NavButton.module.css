@@ -1,0 +1,14 @@
+.NavButton {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  transition: color 0.2s ease-in-out;
+
+  @mixin hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &[data-active] {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+  }
+}

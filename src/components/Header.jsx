@@ -1,37 +1,41 @@
-import { Group, Title, Image, Anchor } from "@mantine/core";
+import { Group, Title, Image } from "@mantine/core";
+import NavButton from "./buttons/NavButton";
 import { useState } from "react";
 
 const buttons = [
   {
     label: "Home",
-    route: "/",
+    id: "home",
   },
   {
     label: "About",
-    route: "/about",
+    id: "about",
   },
   {
     label: "Contact Us",
-    route: "/contact",
+    id: "contact",
   },
 ];
 
 export default function Header() {
   const [active, setActive] = useState("Home");
 
-  const mappedButtons = buttons.map(({ label, route }) => (
-    <Anchor
-      variant="transparent"
-      c="white"
-      underline="never"
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleActive = (label, id) => {
+    setActive(label);
+    scrollToSection(id);
+  };
+
+  const mappedButtons = buttons.map(({ label, id }) => (
+    <NavButton
       key={label}
-      href={route}
-      onClick={(event) => {
-        event.preventDefault();
-      }}
-    >
-      {label}
-    </Anchor>
+      active={active}
+      label={label}
+      onClick={() => handleActive(label, id)}
+    />
   ));
 
   return (
