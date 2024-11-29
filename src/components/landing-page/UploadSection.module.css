@@ -40,7 +40,7 @@
   }
 
   @media (min-width: $mantine-breakpoint-md) {
-    max-width: 600px;
+    max-width: 525px;
   }
 
   @media (min-width: $mantine-breakpoint-lg) {

@@ -36,7 +36,7 @@ export default function UploadSection({ ...props }) {
             align={{ base: "center", md: "" }}
             className={classes.TextWidth}
           >
-            <Title fz={{ base: 35, sm: 50, md: 45, lg: 50 }} c="white">
+            <Title fz={{ base: 35, sm: 50, md: 50 }} c="white">
               Stay Protected Against Deepfake Manipulation
             </Title>
             <Text fz={{ base: 14, md: 18, lg: 20 }} c="white">
