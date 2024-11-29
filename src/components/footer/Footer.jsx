@@ -1,9 +1,23 @@
 import classes from "./Footer.module.css";
-import { ActionIcon, Stack, Text, Title, Flex } from "@mantine/core";
+import {
+  ActionIcon,
+  Stack,
+  Text,
+  Title,
+  Flex,
+  Image,
+  Group,
+} from "@mantine/core";
 
 // Icons
 import TelephoneIcon from "../../assets/icons/TelephoneIcon.svg";
 import MailIcon from "../../assets/icons/MailIcon.svg";
+import FacebookIcon from "../../assets/icons/FacebookIcon.svg";
+
+// Logos
+import SPCF from "../../assets/images/SPCF.png";
+import ICTDU from "../../assets/images/ICTDU.png";
+import CCIS from "../../assets/images/CCIS.png";
 
 // Components
 import Container from "../Container.jsx";
@@ -57,22 +71,29 @@ export default function Footer() {
               </Text>
             </Stack>
 
-            <Stack flex={1}>
-              <Title pt={16} order={4}>
-                Contact Us
-              </Title>
+            <Stack pt={16} flex={1}>
+              <Title order={4}>Contact Us</Title>
               {mappedContactUs}
             </Stack>
 
-            <Stack>
-              <Title pt={16} order={4}>
-                Follow Us
-              </Title>
+            <Stack pt={16} flex={1}>
+              <Title order={4}>Follow Us</Title>
 
-              <ActionIcon variant="outline" color="white" radius="xl" size="lg">
-                F
-              </ActionIcon>
+              <Group>
+                <ActionIcon variant="outline" radius="xl" size="lg">
+                  <Image h={16} src={FacebookIcon} alt="Facebook Icon" />
+                </ActionIcon>
+                <ActionIcon variant="outline" radius="xl" size="lg">
+                  <Image h={16} src={FacebookIcon} alt="Facebook Icon" />
+                </ActionIcon>
+              </Group>
             </Stack>
+
+            <Group pt={16}>
+              <Image h={48} src={SPCF} alt="SPCF Logo" />
+              <Image h={48} src={ICTDU} alt="ICTDU Logo" />
+              <Image h={48} src={CCIS} alt="CCIS Logo" />
+            </Group>
           </Flex>
         </Container>
       </div>
