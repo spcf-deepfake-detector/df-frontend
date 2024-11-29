@@ -27,3 +27,23 @@
   z-index: -1;
   pointer-events: none;
 }
+
+.ImagesPosition {
+  @media (max-width: $mantine-breakpoint-md) {
+    justify-content: center;
+  }
+}
+
+.TextWidth {
+  @media (min-width: $mantine-breakpoint-sm) {
+    max-width: 650px;
+  }
+
+  @media (min-width: $mantine-breakpoint-md) {
+    max-width: 600px;
+  }
+
+  @media (min-width: $mantine-breakpoint-lg) {
+    max-width: 625px;
+  }
+}

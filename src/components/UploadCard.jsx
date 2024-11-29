@@ -11,8 +11,8 @@ export default function UploadCard() {
   return (
     <Paper
       radius={12}
-      w={{ base: 475, lg: 600 }}
-      p={40}
+      w={{ base: 350, sm: 475, md: 525, lg: 600 }}
+      p={{ base: 25, sm: 35 }}
       styles={{
         root: {
           backgroundColor: "var(--mantine-color-gray-4)",
@@ -24,7 +24,7 @@ export default function UploadCard() {
 
         {/* Upload Field */}
         <Dropzone
-          p={20}
+          p={{ base: 13, sm: 20, md: 13, lg: 20 }}
           className={classes.DropzoneBorder}
           styles={{
             root: {
@@ -33,14 +33,12 @@ export default function UploadCard() {
           }}
         >
           <Stack align="center" gap="xs">
-            <Image src={UploadIcon} w={20}></Image>
-            <Group gap={3}>
-              <Text fz="sm" c="blue.9" fw={650}>
-                Choose a File
-              </Text>
-              <Text fz={{base: "xs", lg: "sm"}}>or Drag here to Detect Deepfake Videos</Text>
-            </Group>
-            <Text fz={{base: 11, lg: "xs"}} c="dimmed">
+            <Image src={UploadIcon} w={{ base: 15, sm: 20 }}></Image>
+            <Text fz="xs">
+              <span className={classes.TextHiglight}>Choose a File </span>
+              or Drag here to Detect Deepfake Videos
+            </Text>
+            <Text fz={11} c="dimmed">
               Supported format: MP4, with a maximum size of 50MB
             </Text>
           </Stack>

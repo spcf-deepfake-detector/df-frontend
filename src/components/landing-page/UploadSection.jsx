@@ -16,31 +16,32 @@ const images = [CCISLogo, SPCFLogo, ICTDULogo];
 
 export default function UploadSection({ ...props }) {
   const logoImages = images.map((image, index) => (
-    <Image key={"image" + index} src={image} w={{ base: 65, md: 50 }} />
+    <Image key={"image" + index} src={image} h={{ base: 50, md: 50 }} />
   ));
 
   return (
     <section className={classes.UploadSection} {...props}>
       <Container py={120}>
-        <Group justify={{ base: "center" }}>{logoImages}</Group>
+        <Group className={classes.ImagesPosition}>{logoImages}</Group>
         <Flex
           align="center"
-          gap={50}
-          h={{ base: 500, md: 600 }}
+          gap={{ base: 35, md: 40 }}
+          mt={{ base: 25, md: 0 }}
+          justify="space-between"
+          h={500}
           direction={{ base: "column", md: "row" }}
         >
           <Stack
             gap="lg"
-            w={{ base: 700, md: 1000 }}
             align={{ base: "center", md: "" }}
+            className={classes.TextWidth}
           >
-            <Title fz={{ base: 55, md: 38, lg: 50 }} c="white">
-              Stay protected against deepfake manipulation
+            <Title fz={{ base: 35, sm: 50, md: 45, lg: 50 }} c="white">
+              Stay Protected Against Deepfake Manipulation
             </Title>
-            <Text fz={{ base: 13, md: 15, lg: 20 }} c="white">
-              Our deepfake detection solution offers 90% accuracy for video
-              content, identifying if it's real or manipulated using advanced
-              AI-powered technology.
+            <Text fz={{ base: 14, md: 18, lg: 20 }} c="white">
+              Our deepfake detection uses AI-powered technology to identify
+              whether video content is real or manipulated.
             </Text>
           </Stack>
           <UploadCard />

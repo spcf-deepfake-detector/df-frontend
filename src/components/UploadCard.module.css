@@ -30,9 +30,10 @@
   background-position: left top, right top, left bottom, left top;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-size: 100% 1.2px, 1.2px 100%, 100% 1.2px, 1.2px 100%;
-  width: 500px;
+  width: 100%;
+}
 
-  @media (max-width: $mantine-breakpoint-lg) {
-    width: 400px;
-  }
+.TextHiglight{
+  color: var(--mantine-color-blue-9);
+  font-weight: 700;
 }
