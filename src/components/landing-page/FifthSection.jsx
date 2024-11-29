@@ -10,8 +10,8 @@ export default function FifthSection() {
     <section>
       <Container py={64}>
         <SectionTitle
-          title="Ensuring Content Authenticity"
-          subtitle="The Importance of using Deepfake Detection"
+          title="The Surge of Deepfake Scams"
+          subtitle="In-Depth Look of Growing Threat of AI Deception"
           color="black"
           mb={64}
         />
@@ -29,10 +29,9 @@ export default function FifthSection() {
               Finance worker pays out $25 million after video call with deepfake
             </Title>
             <Text mt={16} size="lg">
-              A finance worker at a multinational firm was tricked into paying
-              out $25 million to fraudsters using deepfake technology to pose as
-              the company’s chief financial officer in a video conference call,
-              according to Hong Kong police.
+              Heidi Swan, who is a 62 year old healthcare worker eventually fell
+              victim to a sophisticated scam involving deepfake technology that
+              impersonated Elon Musk.
             </Text>
 
             <a
@@ -57,7 +56,8 @@ export default function FifthSection() {
             order={{ base: 4, md: 3 }}
           >
             <Title order={1}>
-              Finance worker pays out $25 million after video call with deepfake
+              High-tech thieves use AI to create deepfakes of Elon Musk, scam
+              millions from Americans
             </Title>
             <Text mt={16} size="lg">
               A finance worker at a multinational firm was tricked into paying
