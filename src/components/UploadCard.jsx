@@ -1,13 +1,16 @@
-import { Paper, Title, Stack, Text, Group, Button, Image } from "@mantine/core";
+import { Paper, Title, Stack, Group, Button } from "@mantine/core";
 import { Dropzone } from "@mantine/dropzone";
-
-// Media
-import UploadIcon from "../assets/buttons/UploadIcon.svg";
 
 // CSS Modules
 import classes from "./UploadCard.module.css";
 
+// Components
+import UploadContent from "./UploadContent";
+import { useState } from "react";
+
 export default function UploadCard({ ...props }) {
+  const [file, setFile] = useState();
+
   return (
     <Paper radius="lg" bg="gray.4" p={{ base: 25, sm: 35 }} {...props}>
       <Stack align="center" gap="lg">
@@ -23,16 +26,7 @@ export default function UploadCard({ ...props }) {
             },
           }}
         >
-          <Stack align="center" gap="xs">
-            <Image src={UploadIcon} w={{ base: 15, sm: 20 }}></Image>
-            <Text fz="xs">
-              <span className={classes.TextHiglight}>Choose a File </span>
-              or Drag here to Detect Deepfake Videos
-            </Text>
-            <Text fz={11} c="dimmed">
-              Supported format: MP4, with a maximum size of 50MB
-            </Text>
-          </Stack>
+          <UploadContent />
         </Dropzone>
       </Stack>
 
