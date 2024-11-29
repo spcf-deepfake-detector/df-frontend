@@ -1,5 +1,5 @@
 import classes from "./Footer.module.css";
-import { Group, Stack, Text, Title } from "@mantine/core";
+import { ActionIcon, Stack, Text, Title, Flex } from "@mantine/core";
 
 // Icons
 import TelephoneIcon from "../../assets/icons/TelephoneIcon.svg";
@@ -51,9 +51,14 @@ export default function Footer() {
   return (
     <footer className={classes.Footer}>
       <div className={classes.SectionOne}>
-        <Container py={64}>
-          <Group align="start" wrap="no-wrap" gap={32}>
-            <Stack w="30%">
+        <Container py={48}>
+          <Flex
+            align="start"
+            wrap="no-wrap"
+            direction={{ base: "column", sm: "row" }}
+            gap={32}
+          >
+            <Stack flex={1}>
               <AppTitle />
 
               <Text>
@@ -72,19 +77,29 @@ export default function Footer() {
               </Title>
               {mappedContactUs}
             </Stack>
+
             <Stack flex={1}>
               <Title pt={16} order={4}>
                 Location
               </Title>
               {mappedLocation}
             </Stack>
+
             <Stack>
               <Title pt={16} order={4}>
                 Follow Us
               </Title>
+
+              <ActionIcon variant="outline" color="white" radius="xl" size="lg">
+                F
+              </ActionIcon>
             </Stack>
-          </Group>
+          </Flex>
         </Container>
+      </div>
+
+      <div className={classes.SectionTwo}>
+        <Text size="sm">&copy; Systems Plus College Foundation</Text>
       </div>
     </footer>
   );

@@ -1,11 +1,24 @@
 .Footer {
-  height: 300px;
-  background-color: rgba(1, 3, 5, 0.4);
+  height: 100%;
+  background-color: rgba(1, 3, 5, 1);
   color: #fff;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    height: 300px;
+  }
 }
 
 .SectionOne {
   .span {
     color: rgba(255, 255, 255, 0.5);
   }
+}
+
+.SectionTwo {
+  height: 50px;
+  background-color: rgba(0, 93, 169, 1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
