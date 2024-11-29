@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 
 // Components
-import AppTitle from "./AppTitle.jsx";
+import AppTitle from "./titles/AppTitle.jsx";
 import NavDrawer from "./drawers/NavDrawer.jsx";
 import NavButton from "./buttons/NavButton.jsx";
 import NavLink from "./buttons/NavLink.jsx";

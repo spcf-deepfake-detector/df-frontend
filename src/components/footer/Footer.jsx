@@ -8,7 +8,7 @@ import PinpointIcon from "../../assets/icons/PinpointIcon.svg";
 
 // Components
 import Container from "../Container.jsx";
-import AppTitle from "../AppTitle.jsx";
+import AppTitle from "../titles/AppTitle.jsx";
 import IconLabel from "../labels/IconLabel.jsx";
 
 const iconData = {
