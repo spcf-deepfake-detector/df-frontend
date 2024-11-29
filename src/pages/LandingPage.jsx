@@ -7,10 +7,10 @@ import Footer from "../components/footer/Footer.jsx";
 export default function LandingPage() {
   return (
     <>
-      <UploadSection />
-      <SecondSection />
+      <UploadSection id="home" />
+      <SecondSection id="about" />
       <FourthSection />
-      <Footer />
+      <Footer id="contact" />
     </>
   );
 }

@@ -29,13 +29,13 @@ export default function Header() {
   const [active, setActive] = useState("Home");
   const [opened, { toggle }] = useDisclosure(false);
 
-  // const scrollToSection = (id) => {
-  //   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-  // };
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleActive = (label, id) => {
     setActive(label);
-    // scrollToSection(id);
+    scrollToSection(id);
 
     if (opened) {
       toggle();

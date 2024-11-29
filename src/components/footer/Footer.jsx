@@ -43,13 +43,13 @@ const iconData = {
   ],
 };
 
-export default function Footer() {
+export default function Footer({ ...props }) {
   const mappedContactUs = iconData.contactUs.map((dataProps) => (
     <IconLabel key={dataProps.label.title} {...dataProps} />
   ));
 
   return (
-    <footer className={classes.Footer}>
+    <footer className={classes.Footer} {...props}>
       <div className={classes.SectionOne}>
         <Container py={48}>
           <Flex

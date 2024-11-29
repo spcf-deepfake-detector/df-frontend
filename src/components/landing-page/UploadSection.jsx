@@ -14,13 +14,13 @@ import ICTDULogo from "../../assets/images/ICTDU.png";
 
 const images = [CCISLogo, SPCFLogo, ICTDULogo];
 
-export default function UploadSection() {
-  const logoImages = images.map((image) => (
-    <Image src={image} w={{ base: 65, md: 50 }} />
+export default function UploadSection({ ...props }) {
+  const logoImages = images.map((image, index) => (
+    <Image key={"image" + index} src={image} w={{ base: 65, md: 50 }} />
   ));
 
   return (
-    <section className={classes.UploadSection}>
+    <section className={classes.UploadSection} {...props}>
       <Container py={120}>
         <Group justify={{ base: "center" }}>{logoImages}</Group>
         <Flex
