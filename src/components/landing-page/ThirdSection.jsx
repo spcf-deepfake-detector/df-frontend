@@ -6,7 +6,7 @@ import IronMan2 from "../../assets/images/IronMan1.png";
 export default function ThirdSection() {
   return (
     <section>
-      <Container py={120}>
+      <Container py={64}>
         <Grid>
           <Grid.Col span={12}>
             <Flex justify="center">
@@ -34,14 +34,18 @@ export default function ThirdSection() {
             they never actually did.
           </Text>
 
-          <Grid.Col span={{base: 12, md: 6}}>
-              <Image src={IronMan1} width={400} radius={12}/>
-              <Text fw={600} ta="center" mt={16}>Iron Man starring Tony Stark</Text>
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Image src={IronMan1} width={400} radius={12} />
+            <Text fw={600} ta="center" mt={16}>
+              Iron Man starring Tony Stark
+            </Text>
           </Grid.Col>
-          
-          <Grid.Col span={{base: 12, md: 6}}>
-              <Image src={IronMan1} width={400} radius={12}/>
-              <Text fw={600} ta="center" mt={16}>A deepfake version with Tom Cruise as Iron Man.</Text>
+
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Image src={IronMan1} width={400} radius={12} />
+            <Text fw={600} ta="center" mt={16}>
+              A deepfake version with Tom Cruise as Iron Man.
+            </Text>
           </Grid.Col>
         </Grid>
       </Container>

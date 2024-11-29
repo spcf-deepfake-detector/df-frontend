@@ -1,6 +1,7 @@
 .SecondSection {
   background-color: rgba(1, 3, 5, 1);
   color: white;
+  padding-bottom: 64px;
 
   .cardContainer {
     max-width: 350px;

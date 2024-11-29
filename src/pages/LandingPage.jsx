@@ -9,12 +9,12 @@ import Footer from "../components/footer/Footer.jsx";
 export default function LandingPage() {
   return (
     <>
-      <UploadSection />
-      <SecondSection />
+      <UploadSection id="home" />
+      <SecondSection id="about" />
       <ThirdSection />
       <FourthSection />
-      <FifthSection/>
-      <Footer />
+      <FifthSection />
+      <Footer id="contact" />
     </>
   );
 }
