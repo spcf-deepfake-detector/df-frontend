@@ -39,7 +39,7 @@ const cardData = [
   },
 ];
 
-export default function FourthSection() {
+export default function FourthSection({ ...props }) {
   const mappedCards = cardData.map(({ title, description }) => (
     <Grid.Col span={{ base: 12, sm: 6, md: 4 }} key={title}>
       <FeatureCard gap={24} h="100%">
@@ -52,7 +52,7 @@ export default function FourthSection() {
   ));
 
   return (
-    <section className={classes.FourthSection}>
+    <section className={classes.FourthSection} {...props}>
       <Container>
         <SectionTitle
           title="Ensuring Content Authenticity"

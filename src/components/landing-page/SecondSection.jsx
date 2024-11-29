@@ -31,7 +31,7 @@ const cardData = [
   },
 ];
 
-export default function SecondSection() {
+export default function SecondSection({ ...props }) {
   const mappedCards = cardData.map(({ image, title, description }) => (
     <FeatureCard key={title} gap={24} flex={1}>
       <Image w={35} src={image} alt={title} />
@@ -44,7 +44,7 @@ export default function SecondSection() {
   ));
 
   return (
-    <section className={classes.SecondSection}>
+    <section className={classes.SecondSection} {...props}>
       <Container>
         <Title order={1} ta="center" mb={24}>
           How Our Deepfake Detector{" "}

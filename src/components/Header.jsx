@@ -1,7 +1,7 @@
 import { Burger, Group, Stack } from "@mantine/core";
 
 // Hooks
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDisclosure } from "@mantine/hooks";
 
 // Components
@@ -29,13 +29,13 @@ export default function Header() {
   const [active, setActive] = useState("Home");
   const [opened, { toggle }] = useDisclosure(false);
 
-  // const scrollToSection = (id) => {
-  //   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-  // };
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleActive = (label, id) => {
     setActive(label);
-    // scrollToSection(id);
+    scrollToSection(id);
 
     if (opened) {
       toggle();
@@ -59,6 +59,39 @@ export default function Header() {
       onClick={() => handleActive(label, id)}
     />
   ));
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          const button = buttons.find((btn) => btn.id === sectionId);
+          if (button) {
+            setActive(button.label);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, observerOptions);
+
+    // Observe all sections
+    buttons.forEach(({ id }) => {
+      const section = document.getElementById(id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    // Cleanup observer on unmount
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
