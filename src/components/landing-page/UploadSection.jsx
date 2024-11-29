@@ -24,12 +24,9 @@ export default function UploadSection({ ...props }) {
       <Container py={120}>
         <Group className={classes.ImagesPosition}>{logoImages}</Group>
         <Flex
-          align="center"
           gap={{ base: 35, md: 40 }}
-          mt={{ base: 25, md: 0 }}
-          justify="space-between"
-          h={500}
           direction={{ base: "column", md: "row" }}
+          className={classes.FlexProperties}
         >
           <Stack
             gap="lg"

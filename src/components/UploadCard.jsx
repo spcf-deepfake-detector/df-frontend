@@ -11,7 +11,6 @@ export default function UploadCard() {
   return (
     <Paper
       radius={12}
-      w={{ base: 350, sm: 475, md: 525, lg: 600 }}
       p={{ base: 25, sm: 35 }}
       styles={{
         root: {

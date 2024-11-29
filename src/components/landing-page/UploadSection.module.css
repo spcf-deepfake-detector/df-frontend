@@ -47,3 +47,17 @@
     max-width: 625px;
   }
 }
+
+.FlexProperties {
+  height: 100%;
+  align-items: center;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-top: 25px;
+  }
+
+}
