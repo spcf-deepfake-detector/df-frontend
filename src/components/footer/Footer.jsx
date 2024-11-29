@@ -4,7 +4,6 @@ import { ActionIcon, Stack, Text, Title, Flex } from "@mantine/core";
 // Icons
 import TelephoneIcon from "../../assets/icons/TelephoneIcon.svg";
 import MailIcon from "../../assets/icons/MailIcon.svg";
-import PinpointIcon from "../../assets/icons/PinpointIcon.svg";
 
 // Components
 import Container from "../Container.jsx";
@@ -28,23 +27,10 @@ const iconData = {
       },
     },
   ],
-  location: [
-    {
-      icon: PinpointIcon,
-      label: {
-        title: "SPCF",
-        description: "Sta. Isabel Bldg., Balibago, Angeles City",
-      },
-    },
-  ],
 };
 
 export default function Footer() {
   const mappedContactUs = iconData.contactUs.map((dataProps) => (
-    <IconLabel key={dataProps.label.title} {...dataProps} />
-  ));
-
-  const mappedLocation = iconData.location.map((dataProps) => (
     <IconLabel key={dataProps.label.title} {...dataProps} />
   ));
 
@@ -76,13 +62,6 @@ export default function Footer() {
                 Contact Us
               </Title>
               {mappedContactUs}
-            </Stack>
-
-            <Stack flex={1}>
-              <Title pt={16} order={4}>
-                Location
-              </Title>
-              {mappedLocation}
             </Stack>
 
             <Stack>
