@@ -1,39 +1,11 @@
 .DropzoneBorder {
-  background-image: repeating-linear-gradient(
-      90deg,
-      #000000,
-      #000000 18px,
-      transparent 18px,
-      transparent 37px
-    ),
-    repeating-linear-gradient(
-      180deg,
-      #000000,
-      #000000 18px,
-      transparent 18px,
-      transparent 37px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      #000000,
-      #000000 18px,
-      transparent 18px,
-      transparent 37px
-    ),
-    repeating-linear-gradient(
-      180deg,
-      #000000,
-      #000000 18px,
-      transparent 18px,
-      transparent 37px
-    );
-  background-position: left top, right top, left bottom, left top;
-  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
-  background-size: 100% 1.2px, 1.2px 100%, 100% 1.2px, 1.2px 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23333' stroke-width='2' stroke-dasharray='23%2c 16' stroke-dashoffset='15' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 10px;
+  border: none;
   width: 100%;
 }
 
-.TextHiglight{
+.TextHiglight {
   color: var(--mantine-color-blue-9);
   font-weight: 700;
 }

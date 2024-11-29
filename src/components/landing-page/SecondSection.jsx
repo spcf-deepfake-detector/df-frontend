@@ -1,5 +1,5 @@
 import classes from "./SecondSection.module.css";
-import { Title, Text, Group, Image, Box, Flex } from "@mantine/core";
+import { Title, Text, Image, Box, Flex } from "@mantine/core";
 
 // Icons
 import EmoteCaptureIcon from "../../assets/icons/EmoteCaptureIcon.svg";

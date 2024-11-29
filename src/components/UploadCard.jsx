@@ -7,23 +7,15 @@ import UploadIcon from "../assets/buttons/UploadIcon.svg";
 // CSS Modules
 import classes from "./UploadCard.module.css";
 
-export default function UploadCard() {
+export default function UploadCard({ ...props }) {
   return (
-    <Paper
-      radius={12}
-      p={{ base: 25, sm: 35 }}
-      styles={{
-        root: {
-          backgroundColor: "var(--mantine-color-gray-4)",
-        },
-      }}
-    >
+    <Paper radius="lg" bg="gray.4" p={{ base: 25, sm: 35 }} {...props}>
       <Stack align="center" gap="lg">
         <Title order={3}>Scan for Deepfakes</Title>
 
         {/* Upload Field */}
         <Dropzone
-          p={{ base: 13, sm: 20, md: 13, lg: 20 }}
+          p={{ base: 13, lg: 20 }}
           className={classes.DropzoneBorder}
           styles={{
             root: {

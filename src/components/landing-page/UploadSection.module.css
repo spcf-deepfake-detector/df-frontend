@@ -2,13 +2,14 @@
   position: relative;
   background: url(/bg-image.jpg) no-repeat center center / cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 0;
   text-align: center;
 
   @media (min-width: $mantine-breakpoint-sm) {
     background-position: center 30%;
     background-size: 100% auto;
+    height: 100vh;
   }
 
   @media (min-width: $mantine-breakpoint-md) {
@@ -31,20 +32,6 @@
 .ImagesPosition {
   @media (max-width: $mantine-breakpoint-md) {
     justify-content: center;
-  }
-}
-
-.TextWidth {
-  @media (min-width: $mantine-breakpoint-sm) {
-    max-width: 650px;
-  }
-
-  @media (min-width: $mantine-breakpoint-md) {
-    max-width: 525px;
-  }
-
-  @media (min-width: $mantine-breakpoint-lg) {
-    max-width: 625px;
   }
 }
 

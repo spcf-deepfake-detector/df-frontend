@@ -28,11 +28,7 @@ export default function UploadSection({ ...props }) {
           direction={{ base: "column", md: "row" }}
           className={classes.FlexProperties}
         >
-          <Stack
-            gap="lg"
-            align={{ base: "center", md: "" }}
-            className={classes.TextWidth}
-          >
+          <Stack flex={1} gap="lg" align={{ base: "center", md: "" }}>
             <Title fz={{ base: 35, sm: 50, md: 50 }} c="white">
               Stay Protected Against Deepfake Manipulation
             </Title>
@@ -41,7 +37,7 @@ export default function UploadSection({ ...props }) {
               whether video content is real or manipulated.
             </Text>
           </Stack>
-          <UploadCard />
+          <UploadCard flex={1} maw={550} />
         </Flex>
       </Container>
     </section>

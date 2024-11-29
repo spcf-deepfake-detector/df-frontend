@@ -1,7 +1,7 @@
 import { Flex, Grid, Text, Title, Image, Box } from "@mantine/core";
 import Container from "../Container";
 import IronMan1 from "../../assets/images/IronMan1.png";
-import IronMan2 from "../../assets/images/IronMan1.png";
+import IronMan2 from "../../assets/images/IronMan2.png";
 
 export default function ThirdSection() {
   return (
@@ -42,7 +42,7 @@ export default function ThirdSection() {
           </Grid.Col>
 
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <Image src={IronMan1} width={400} radius={12} />
+            <Image src={IronMan2} width={400} radius={12} />
             <Text fw={600} ta="center" mt={16}>
               A deepfake version with Tom Cruise as Iron Man.
             </Text>
