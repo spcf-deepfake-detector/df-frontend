@@ -1,0 +1,10 @@
+.FeatureCard {
+  background-color: rgba(0, 93, 169, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+
+  @mixin hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 93, 169, 0.4);
+  }
+}
