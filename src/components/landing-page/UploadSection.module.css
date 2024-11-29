@@ -4,10 +4,15 @@
   width: 100%;
   height: 100vh;
   z-index: 0;
+  text-align: center;
 
   @media (min-width: $mantine-breakpoint-sm) {
     background-position: center 30%;
     background-size: 100% auto;
+  }
+
+  @media (min-width: $mantine-breakpoint-md) {
+    text-align: left;
   }
 }
 

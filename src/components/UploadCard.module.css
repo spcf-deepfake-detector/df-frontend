@@ -1,0 +1,38 @@
+.DropzoneBorder {
+  background-image: repeating-linear-gradient(
+      90deg,
+      #000000,
+      #000000 18px,
+      transparent 18px,
+      transparent 37px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #000000,
+      #000000 18px,
+      transparent 18px,
+      transparent 37px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #000000,
+      #000000 18px,
+      transparent 18px,
+      transparent 37px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #000000,
+      #000000 18px,
+      transparent 18px,
+      transparent 37px
+    );
+  background-position: left top, right top, left bottom, left top;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-size: 100% 1.2px, 1.2px 100%, 100% 1.2px, 1.2px 100%;
+  width: 500px;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    width: 400px;
+  }
+}

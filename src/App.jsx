@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import { AppShell } from "@mantine/core";
 import classes from "./App.module.css";
+import '@mantine/dropzone/styles.css';
 
 // Components
 import Header from "./components/Header.jsx";
