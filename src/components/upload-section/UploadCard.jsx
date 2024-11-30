@@ -9,7 +9,7 @@ import classes from "./UploadCard.module.css";
 import UploadContent from "./UploadContent";
 
 // Images
-import UploadIcon from "../assets/buttons/UploadIcon.svg";
+import UploadIcon from "../../assets/buttons/UploadIcon.svg";
 
 const convertToMegabytes = (size) =>
   Math.round((size / (1024 * 1024)) * 100) / 100;

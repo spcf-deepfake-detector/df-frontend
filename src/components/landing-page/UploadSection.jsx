@@ -1,7 +1,7 @@
 import { Flex, Stack, Text, Title, Group, Image } from "@mantine/core";
 
 // Components
-import UploadCard from "../UploadCard.jsx";
+import UploadCard from "../upload-section/UploadCard.jsx";
 import Container from "../Container.jsx";
 
 // CSS Modules
