@@ -3,9 +3,17 @@
   border-radius: 10px;
   border: none;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .TextHiglight {
   color: var(--mantine-color-blue-9);
+  font-weight: 700;
+}
+
+.TextReject {
+  color: var(--mantine-color-red-6);
   font-weight: 700;
 }

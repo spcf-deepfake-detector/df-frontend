@@ -6,6 +6,7 @@ import "./index.css";
 import { MantineProvider } from "@mantine/core";
 import { theme, resolver } from "./plugins/mantine.js";
 import "@mantine/core/styles.css";
+import "@mantine/dropzone/styles.css";
 
 // React Router
 import AppRouter from "./router/AppRouter.jsx";

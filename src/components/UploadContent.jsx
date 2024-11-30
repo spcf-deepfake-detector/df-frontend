@@ -1,26 +1,34 @@
 import { Stack, Image, Text } from "@mantine/core";
-import { useState } from "react";
+import { useMemo } from "react";
 
-// Media
-import UploadIcon from "../assets/buttons/UploadIcon.svg";
-
-// CSS Modules
-import classes from "./UploadCard.module.css";
-
-export default function UploadContent() {
+export default function UploadContent({
+  image,
+  status,
+  title,
+  subtitle,
+  color,
+}) {
+  const whichTitle = useMemo(() => {
+    if (image) {
+      return <Image src={image} w={{ base: 15, sm: 20 }} />;
+    } else if (status) {
+      return (
+        <Text size="xs" fw="bold">
+          {status}
+        </Text>
+      );
+    }
+  }, [status, image]);
 
   return (
-    <>
-      <Stack align="center" gap="xs">
-        <Image src={UploadIcon} w={{ base: 15, sm: 20 }}></Image>
-        <Text fz="xs">
-          <span className={classes.TextHiglight}>Choose a File </span>
-          or Drag here to Detect Deepfake Videos
-        </Text>
-        <Text fz={11} c="dimmed">
-          Supported format: MP4, with a maximum size of 50MB
-        </Text>
-      </Stack>
-    </>
+    <Stack align="center" gap="xs" c={color}>
+      {whichTitle}
+      <Text size="xs" c={color ? color : "black"}>
+        {title}
+      </Text>
+      <Text fz={11} c={color ? color : "dimmed"}>
+        {subtitle}
+      </Text>
+    </Stack>
   );
 }
