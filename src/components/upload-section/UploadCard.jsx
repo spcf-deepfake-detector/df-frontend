@@ -119,10 +119,11 @@ export default function UploadCard({
           Reset
         </Button>
         <Button
+          disabled={loading}
           onClick={handleDetect}
           variant="filled"
           color="rgba(12, 91, 155, 0.8)"
-          c="white"
+          autoContrast
         >
           Detect Now
         </Button>
