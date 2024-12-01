@@ -9,6 +9,8 @@ A cutting-edge React-based frontend application for our deepfake project, crafte
 - ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)
 - ![Mantine](https://img.shields.io/badge/Mantine-339AF0?logo=mantine&logoColor=white)
 - ![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white)
+- ![Zustand](https://img.shields.io/badge/Zustand-764ABC?logo=react&logoColor=white)
+- ![Axios](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white)
 
 ## 🛠 Prerequisites
 
@@ -44,6 +46,8 @@ npm run lint
 - 📱 Responsive UI
 - 🔀 Seamless client-side routing
 - 🧩 Modular React architecture
+- 🌐 Efficient state management with Zustand
+- 🚀 Streamlined API communications using Axios
 
 ## 📋 Commit Message Conventions
 
