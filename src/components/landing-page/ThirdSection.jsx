@@ -1,4 +1,4 @@
-import { Flex, Grid, Text, Title, Image, Box } from "@mantine/core";
+import { Grid, Text, Title, Image } from "@mantine/core";
 import Container from "../Container";
 import IronMan1 from "../../assets/images/IronMan1.png";
 import IronMan2 from "../../assets/images/IronMan2.png";
@@ -7,19 +7,15 @@ export default function ThirdSection() {
   return (
     <section>
       <Container py={64}>
-        <Grid>
-          <Grid.Col span={12}>
-            <Flex justify="center">
-              <Title fw={700} order={1}>
-                How Deepfake Technology{" "}
-                <Title order={1} component="span" c="#005DA9" fw={700}>
-                  Creates Realistic Video
-                </Title>
-              </Title>
-            </Flex>
-          </Grid.Col>
+        <Title order={1} ta="center" mb={24}>
+          How Deepfake Technology{" "}
+          <Title order={1} component="span" c="#005DA9" fw={700}>
+            Creates Realistic Video
+          </Title>
+        </Title>
 
-          <Text size="xl" ta="center" my={30}>
+        <Grid>
+          <Text size="xl" ta="center" mb={24}>
             Deepfake technology uses{" "}
             <Text span size="xl" fw={700}>
               artificial intelligence (AI)

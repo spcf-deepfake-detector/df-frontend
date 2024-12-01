@@ -9,11 +9,11 @@
   @media (min-width: $mantine-breakpoint-sm) {
     background-position: center 30%;
     background-size: 100% auto;
-    height: 100vh;
   }
 
   @media (min-width: $mantine-breakpoint-md) {
     text-align: left;
+    height: 100vh;
   }
 }
 
@@ -46,5 +46,4 @@
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: 25px;
   }
-
 }

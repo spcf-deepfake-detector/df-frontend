@@ -13,7 +13,7 @@ export default function FifthSection() {
           title="The Surge of Deepfake Scams"
           subtitle="In-Depth Look of Growing Threat of AI Deception"
           color="black"
-          mb={64}
+          mb={36}
         />
 
         <Grid>
