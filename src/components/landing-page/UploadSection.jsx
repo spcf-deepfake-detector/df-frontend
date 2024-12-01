@@ -12,12 +12,40 @@ import CCISLogo from "../../assets/images/CCIS.png";
 import SPCFLogo from "../../assets/images/SPCF.png";
 import ICTDULogo from "../../assets/images/ICTDU.png";
 
+// Zustand
+import { useDeepFakeStore } from "../../store/deepfake.js";
+import { useShallow } from "zustand/shallow";
+import useRequest from "../../hooks/useRequest.jsx";
+
 const images = [CCISLogo, SPCFLogo, ICTDULogo];
 
 export default function UploadSection({ ...props }) {
+  const { analyzeDeepfakeFn, resetDeepfakeFn, data } = useDeepFakeStore(
+    useShallow((state) => ({
+      analyzeDeepfakeFn: state.analyzeDeepfake,
+      resetDeepfakeFn: state.resetDeepfake,
+      data: state.data,
+    }))
+  );
+
+  const { requestWithLoading, loading } = useRequest({
+    fetchFn: analyzeDeepfakeFn,
+  });
+
+  const handleDeepfakeUpload = (payload) => {
+    // Prepare the payload data using FormData
+    const formdata = new FormData();
+    formdata.append("video", payload[0]);
+
+    // Call the fetchDeepfake function from the store
+    requestWithLoading(formdata);
+  };
+
   const logoImages = images.map((image, index) => (
     <Image key={"image" + index} src={image} h={{ base: 50, md: 50 }} />
   ));
+
+  const deepfakeResult = data?.results;
 
   return (
     <section className={classes.UploadSection} {...props}>
@@ -37,7 +65,13 @@ export default function UploadSection({ ...props }) {
               whether video content is real or manipulated.
             </Text>
           </Stack>
-          <UploadCard flex={1} maw={550} />
+          <UploadCard
+            flex={1}
+            maw={550}
+            onClick={handleDeepfakeUpload}
+            onReset={resetDeepfakeFn}
+            result={{ data: deepfakeResult, loading }}
+          />
         </Flex>
       </Container>
     </section>

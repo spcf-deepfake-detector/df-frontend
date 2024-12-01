@@ -6,11 +6,13 @@ import { useState } from "react";
 import classes from "./UploadCard.module.css";
 
 // Components
-import UploadContent from "./UploadContent";
+import UploadContent from "./UploadContent.jsx";
+import UploadResult from "./UploadResult.jsx";
 
 // Images
 import UploadIcon from "../../assets/buttons/UploadIcon.svg";
 
+// Constants
 const convertToMegabytes = (size) =>
   Math.round((size / (1024 * 1024)) * 100) / 100;
 
@@ -24,18 +26,32 @@ const defaultTitle = (classTitle) => (
 const MAX_SIZE = 50 * 1024 * 1024;
 const MAX_FILES = 1;
 
-export default function UploadCard({ ...props }) {
+export default function UploadCard({
+  result: { loading, data },
+  onClick,
+  onReset,
+  ...props
+}) {
   const [file, setFile] = useState(null);
 
   const handleDrop = (files) => {
-    setFile(null);
+    handleReset();
 
     if (files.length > 0) {
       setFile(files);
     }
   };
 
-  const resetFiles = () => setFile(null);
+  const handleReset = () => {
+    setFile(null);
+    onReset();
+  };
+
+  const handleDetect = () => {
+    if (file && file.length > 0) {
+      onClick(file);
+    }
+  };
 
   const uploadLabels = {
     idle: {
@@ -90,18 +106,24 @@ export default function UploadCard({ ...props }) {
       </Stack>
 
       {/* Data */}
+      <UploadResult mt={30} loading={loading} data={data} />
 
       {/* Action Buttons */}
       <Group grow gap="xl" align="center" mt={30}>
         <Button
-          onClick={resetFiles}
+          onClick={handleReset}
           variant="filled"
           color="rgba(1, 65, 117, 0.3)"
           c="blue.9"
         >
           Reset
         </Button>
-        <Button variant="filled" color="rgba(12, 91, 155, 0.8)" c="white">
+        <Button
+          onClick={handleDetect}
+          variant="filled"
+          color="rgba(12, 91, 155, 0.8)"
+          c="white"
+        >
           Detect Now
         </Button>
       </Group>
