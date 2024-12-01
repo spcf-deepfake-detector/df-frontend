@@ -18,7 +18,16 @@ export default function FifthSection() {
 
         <Grid>
           <Grid.Col span={{ base: 12, md: 6 }} mb={{ base: 0, md: 60 }}>
-            <Image src={Ipad} radius={12} />
+            <Image
+              src={Ipad}
+              radius={12}
+              w={{ sm: 488, lg: 616 }}
+              styles={{
+                root: {
+                  justifySelf: "center",
+                },
+              }}
+            />
           </Grid.Col>
           <Grid.Col
             span={{ base: 12, md: 6 }}
@@ -83,7 +92,16 @@ export default function FifthSection() {
           </Grid.Col>
 
           <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 3, md: 4 }}>
-            <Image src={Laptop} radius={12} />
+            <Image
+              src={Laptop}
+              radius={12}
+              w={{ sm: 488, lg: 616 }}
+              styles={{
+                root: {
+                  justifySelf: "center",
+                },
+              }}
+            />
           </Grid.Col>
         </Grid>
       </Container>
