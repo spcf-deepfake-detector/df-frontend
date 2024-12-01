@@ -66,7 +66,6 @@ export default function UploadSection({ ...props }) {
             </Text>
           </Stack>
           <UploadCard
-            flex={1}
             maw={550}
             onClick={handleDeepfakeUpload}
             onReset={resetDeepfakeFn}

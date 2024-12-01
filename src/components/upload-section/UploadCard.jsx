@@ -80,7 +80,7 @@ export default function UploadCard({
   };
 
   return (
-    <Paper radius="lg" bg="gray.4" p={{ base: 25, sm: 35 }} {...props}>
+    <Paper w="100%" radius="lg" bg="gray.4" p={{ base: 25, sm: 35 }} {...props}>
       <Stack align="center" gap="lg">
         <Title order={3}>Scan for Deepfakes</Title>
 
