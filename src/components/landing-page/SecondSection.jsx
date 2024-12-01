@@ -51,7 +51,7 @@ export default function SecondSection({ ...props }) {
           <span className={classes.blueText}>Detects Manipulated Videos</span>
         </Title>
 
-        <Text size="xl" ta="center" mb={24}>
+        <Text fz={{ base: "md", sm: "xl" }} ta="center" mb={24}>
           <span className={classes.boldText}>
             SPCF ICTDU Deepfake Video Detection
           </span>{" "}
