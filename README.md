@@ -70,7 +70,7 @@ Standardized emojis to communicate the nature of changes:
 
 ## 👥 Development Team
 
-- 👨‍💻 **Gabriel Alfonso M. Gatbenton** - Senior Frontend Developer
+- 👨‍💻 **Gabriel Alfonso M. Gatbonton** - Senior Frontend Developer
 - 👨‍💻 **Rhymeses E. Cortez** - Junior Frontend Developer
 - 👨‍💻 **John Carlo D. Paz** - Junior Frontend Developer
 - 👨‍💻 **Jose Gabriel B. Cruz** - Junior Frontend Developer
