@@ -18,7 +18,7 @@ const resultMeta = [
 
 export default function UploadResult({ data, loading, ...props }) {
   const resultData = data && (
-    <Stack gap={10}>
+    <Stack gap={5}>
       {resultMeta.map(({ label, key }) => (
         <Text size="sm" key={key}>
           <span style={{ fontWeight: "bold" }}>{label}:</span> {data[key]}

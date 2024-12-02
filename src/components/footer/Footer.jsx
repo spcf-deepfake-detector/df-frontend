@@ -80,10 +80,14 @@ export default function Footer({ ...props }) {
               <Title order={4}>Follow Us</Title>
 
               <Group>
-                <ActionIcon variant="outline" radius="xl" size="lg">
-                  <Image h={16} src={FacebookIcon} alt="Facebook Icon" />
-                </ActionIcon>
-                <ActionIcon variant="outline" radius="xl" size="lg">
+                <ActionIcon
+                  component="a"
+                  href="https://www.facebook.com/spcf.ictdu"
+                  variant="outline"
+                  radius="xl"
+                  size="lg"
+                  target="_blank"
+                >
                   <Image h={16} src={FacebookIcon} alt="Facebook Icon" />
                 </ActionIcon>
               </Group>
