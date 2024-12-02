@@ -17,11 +17,12 @@ export default function FifthSection() {
         />
 
         <Grid>
-          <Grid.Col span={{ base: 12, md: 6 }} mb={{ base: 0, md: 60 }}>
+          <Grid.Col span={{ base: 12, sm: 6 }} mb={{ base: 0, md: 60 }}>
             <Image
               src={Ipad}
               radius={12}
-              w={{ sm: 488, lg: 616 }}
+              w="100%"
+              // w={{ base: 360, md: 485 }}
               styles={{
                 root: {
                   justifySelf: "center",
@@ -30,14 +31,15 @@ export default function FifthSection() {
             />
           </Grid.Col>
           <Grid.Col
-            span={{ base: 12, md: 6 }}
+            span={{ base: 12, sm: 6 }}
             py={{ base: 20, md: 40 }}
             mb={{ base: 40, md: 60 }}
+            order={{ base: 2, sm: 3, md: 2 }}
           >
-            <Title order={1}>
+            <Title fz={{ base: 24, md: 34 }}>
               Finance worker pays out $25 million after video call with deepfake
             </Title>
-            <Text mt={16} size="lg">
+            <Text mt={16} fz={{ base: 16, md: 18 }} >
               Heidi Swan, who is a 62 year old healthcare worker eventually fell
               victim to a sophisticated scam involving deepfake technology that
               impersonated Elon Musk.
@@ -60,15 +62,15 @@ export default function FifthSection() {
           </Grid.Col>
 
           <Grid.Col
-            span={{ base: 12, md: 6 }}
+            span={{ base: 12, sm: 6 }}
             py={{ base: 20, md: 40 }}
             order={{ base: 4, md: 3 }}
           >
-            <Title order={1}>
+            <Title fz={{ base: 24, md: 34 }}>
               High-tech thieves use AI to create deepfakes of Elon Musk, scam
               millions from Americans
             </Title>
-            <Text mt={16} size="lg">
+            <Text mt={16} fz={{ base: 16, md: 18 }}>
               A finance worker at a multinational firm was tricked into paying
               out $25 million to fraudsters using deepfake technology to pose as
               the company’s chief financial officer in a video conference call,
@@ -91,11 +93,16 @@ export default function FifthSection() {
             </a>
           </Grid.Col>
 
-          <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 3, md: 4 }}>
+          <Grid.Col
+            span={{ base: 12, sm: 6 }}
+            order={{ base: 3, sm: 2, md: 4 }}
+          >
             <Image
               src={Laptop}
               radius={12}
-              w={{ sm: 488, lg: 616 }}
+              w="100%"
+              h="100%"
+              // w={{ base: 360, md: 485 }}
               styles={{
                 root: {
                   justifySelf: "center",

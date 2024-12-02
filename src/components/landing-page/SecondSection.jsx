@@ -35,7 +35,7 @@ export default function SecondSection({ ...props }) {
   const mappedCards = cardData.map(({ image, title, description }) => (
     <FeatureCard key={title} gap={24} flex={1}>
       <Image w={35} src={image} alt={title} />
-      <Title order={2} fw={500}>
+      <Title fz={{ base: 24, md: 34 }} fw={500}>
         {title}
       </Title>
 

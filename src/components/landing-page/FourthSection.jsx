@@ -43,7 +43,7 @@ export default function FourthSection({ ...props }) {
   const mappedCards = cardData.map(({ title, description }) => (
     <Grid.Col span={{ base: 12, sm: 6, md: 4 }} key={title}>
       <FeatureCard gap={24} h="100%">
-        <Title order={2} fw={500}>
+        <Title fz={{ base: 24, md: 34 }} fw={500}>
           {title}
         </Title>
         <Text>{description}</Text>

@@ -5,7 +5,7 @@ export default function SectionTitle({ title, subtitle, color, ...props }) {
   return (
     <>
       <Group visibleFrom="sm" justify="center" c={color} {...props}>
-        <Title order={2}>{title}</Title>
+        <Title fz={{ base: 20, md: 26 }}>{title}</Title>
         <Divider
           orientation="vertical"
           size="xl"
